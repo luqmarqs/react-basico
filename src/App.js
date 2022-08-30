@@ -79,7 +79,7 @@ class App extends Component {
         {/** botão estático */}
         {/*<button onClick={this.adiconarComentario}>Adicionar um comentário</button>*/} 
 
-        <form method="post" onSubmit={this.adicionarComentario}>
+        <form method="post" onSubmit={this.adicionarComentario} className='novo-comentario'>
           <h2>Adicionar comentário</h2>
           <div>
             <input 
@@ -87,6 +87,7 @@ class App extends Component {
             name="nome" 
             value={this.state.novoComentario.nome}
             onChange={this.digitacao}
+            required
             placeholder="Digite seu nome"/>
           </div>
           <div>
@@ -103,6 +104,7 @@ class App extends Component {
             name="mensagem" 
             value={this.state.novoComentario.mensagem}
             onChange={this.digitacao}
+            required
             rows="4"/>
           </div>
 
